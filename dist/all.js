@@ -23,7 +23,7 @@ mainButton.addEventListener('click', () => {
     clickCount++
     clickNumber.innerHTML = clickCount;
     overlay.style.display = 'flex' // show popup
-    if (clickCount < 5) {
+    if (clickCount <= 5) {
         resetButton.style.display = 'none'
     } else {
         resetButton.style.display = 'inline'

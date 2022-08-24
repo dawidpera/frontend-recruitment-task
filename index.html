@@ -1,11 +1,52 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name=”robots” content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Dawid Pera - Recruitment task</title>
+    <meta name="description" content="Front-end recruitment task for GravityGlobal.">
+    <link rel="stylesheet" href="dist/main.css">
 </head>
 <body>
-
+    <main>
+        <!-- IMAGE WITH TEXT SECTION -->
+        <section class="image-section">
+            <!-- Left / top side -->
+            <div class="img-container">
+                <img srcset="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg 480w,
+                    images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg 784w,
+                    images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1002.jpg 1002w,
+                    images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1234.jpg 1234w,
+                    images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1394.jpg 1394w,
+                    images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg 1400w"
+                    alt="Seashore during golden hour">
+            </div>
+            <!-- Right / bottom side -->
+            <div class="text-container">
+                <div>
+                    <h3>Lorem ipsum</h3>
+                    <p>Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.</p>
+                    <button class="filled" id="main-button">Button</button>
+                </div>  
+            </div>
+        </section>
+        <!-- END OF IMAGE WITH TEXT SECTION-->
+    </main>
+    <!-- OVERLAY -->
+    <div class="overlay" style="display: none;">
+        <div class="popup">
+            <h3>Alert!</h3>
+            <p>You clicked <span class="bold">X times</span> to the related button.</p>
+            <button class="outline" id="reset-button">
+                Reset
+            </button>
+            <button class="invisible" id="close-button" aria-label="Close">
+                <img src="images/x-icon.svg" alt="Close">
+            </button>
+        </div>
+    </div>
+    <!-- END OF OVERLAY -->
+    <script src="dist/all.js"></script>
 </body>
+</html>

@@ -1,0 +1,69 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba($color-dark-1, 0.5);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .popup {
+        background: #fff;
+        position: relative;
+
+        @include media(small-mobile) {
+            width: calc(100vw - 40px);
+            padding: 40px 30px;
+        }
+        
+        @include media(mobile) {
+            width: calc(100vw - 80px);
+            padding: 40px;
+        }
+
+        @include media(tablet-portrait) {
+            width: 650px;
+            padding: 56px;
+        }
+        
+        @include media(tablet-landscape, desktop) {
+            width: 920px;
+            padding: 56px 95px;
+        }
+
+        p {
+            margin-top: 24px;
+        }
+
+        #close-button {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+
+            @include media(small-mobile, mobile) {
+                top: 30px;
+                right: 30px;
+            }
+            
+            @include media(tablet-portrait, tablet-landscape, desktop) {
+                top: 46px;
+                right: 46px;
+            }
+
+            img {
+                width: 12px;
+                height: 12px;
+            }
+        }
+
+        #reset-button {
+            margin-top: 20px;
+        }
+
+    }
+}

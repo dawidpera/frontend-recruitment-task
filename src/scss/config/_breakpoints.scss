@@ -1,0 +1,15 @@
+$breakpoints: (
+	small-mobile: (0px, 539px),
+	mobile: (540px, 799px),
+	tablet-portrait: (800px, 1129px),
+	tablet-landscape: (1130px, 1399px),
+	desktop: (1400px, 100000px) // 100000px is not a best-practice solution, however it works for all real-life scenarios. Tried "auto" and "none", but didn't work.
+);
+
+@mixin media($keys...) {
+	@each $key in $keys {
+		@media (min-width: nth(map-get($breakpoints, $key), 1)) and (max-width: nth(map-get($breakpoints, $key), 2)) {
+			@content
+		}
+	}
+}

@@ -1,0 +1,109 @@
+@use 'sass:list';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+// Importing basic configuration like breakpoints and color vars.
+@import 'config/variables', 'config/breakpoints';
+
+// GLOBAL SETTINGS
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+
+    @include media(small-mobile) {
+        padding: 48px 0;
+    }
+
+    @include media(mobile) {
+        padding: 48px 20px;
+    }
+
+    @include media(tablet-portrait) {
+        padding: 72px calc(50vw - 400px);
+    }
+
+    @include media(tablet-landscape) {
+        padding: 72px calc(50vw - 565px);
+    }
+    
+    @include media(desktop) {
+        padding: 96px calc(50vw - 700px);
+    }
+}
+
+main {
+    width: 100%;
+    max-width: 1400px;
+
+    @include media(small-mobile, mobile) {
+        padding: 0 20px;
+    }
+
+    @include media(tablet-portrait) {
+        padding: 0 56px;
+    }
+
+    @include media(tablet-landscape) {
+        padding: 0 60px;
+    }
+
+    @include media(desktop) {
+        padding: 0 195px;
+    }
+}
+
+h3 {
+    color: $color-dark-1;
+    font-size: 42px;
+    font-weight: 700;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+p {
+    color: $color-dark-1;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+// set button globally to reuse on site (like in real-life)
+button {
+    padding: 13px 37px;
+    border-radius: 40px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    &.filled {
+        color: #fff;
+        border: 3px solid $color-primary-1;
+        background: $color-primary-1;
+    }
+
+    &.outline {
+        color: $color-primary-1;
+        border: 3px solid $color-primary-1;
+        background: none;
+    }
+
+    &.invisible {
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: none;
+    }
+}
+
+// Importing each section.
+@import 'sections/image-text', 'sections/overlay';

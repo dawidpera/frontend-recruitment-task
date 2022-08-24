@@ -1,0 +1,76 @@
+.image-section {
+    display: flex;
+
+    @include media(small-mobile, mobile) {
+        flex-direction: column;
+    }
+
+    @include media(tablet-portrait, tablet-landscape, desktop) {
+        flex-direction: row;
+    }
+    
+    @include media(tablet-landscape, desktop) {
+        width: 1010px;
+    }
+
+    * {
+        flex: 1;
+    }
+
+    .img-container {
+        position: relative;
+
+        @include media(small-mobile) {
+            min-height: calc((100vw - 40px) / 16 * 9);
+        }
+
+        @include media(mobile) {
+            min-height: calc((100vw - 80px) / 21 * 9);
+        }
+
+        @include media(tablet-portrait) {
+            min-height: 344px;
+            min-width: 344px;
+        }
+        
+        @include media(tablet-landscape, desktop) {
+            min-height: 330px;
+            min-width: 505px;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .text-container {
+        display: flex;
+        align-items: center;
+
+        @include media(small-mobile) {
+            padding: 20px 10px;
+        }
+
+        @include media(mobile) {
+            padding: 30px 20px;
+        }
+
+        @include media(tablet-portrait) {
+            padding: 30px 30px 30px 60px;
+        }
+        
+        @include media(tablet-landscape, desktop) {
+            padding: 30px 30px 30px 95px;
+        }
+
+        p {
+            margin-top: 24px;
+            margin-bottom: 32px;
+        }
+    }
+}
